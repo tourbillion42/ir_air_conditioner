@@ -21,14 +21,12 @@ void loop() {
     if( str == '0') {
       for(int i= 0; i < 5; i++){
         irsend.sendRaw(Off, sizeof(Off) / sizeof(Off[0]), khz);
-        Serial.println("Turn Off");
-        delay(40); 
+        Serial.println("Turn Off"); 
       }
      } else if(str == '1') {
       for(int i = 0; i < 5; i++){
         irsend.sendRaw(On, sizeof(On) / sizeof(On[0]), khz);
         Serial.println("Turn On");
-        delay(40);
       }
     } else {
       Serial.println("Please try again");
